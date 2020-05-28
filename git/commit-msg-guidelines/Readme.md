@@ -1,5 +1,20 @@
 # Commit message hook
 
+## Setup instructions
+
+1.  Go to git local repository
+```bash
+cd /path/to/the/git/local/repository
+```
+
+2.  Setup commit-msg hook
+```bash
+rm -rf /tmp/setup && \
+    wget https://raw.githubusercontent.com/rxmicro/dev/master/git/commit-msg-guidelines/setup.sh -O /tmp/setup && \
+    chmod 755 /tmp/setup && \
+    /tmp/setup 
+```
+
 ## The seven rules of a great Git commit message
 
 1. Separate subject from body with a blank line!
