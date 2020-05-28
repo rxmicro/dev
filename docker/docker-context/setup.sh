@@ -8,8 +8,9 @@
 # Install instructions:                                                                                                      #
 #                                                                                                                            #
 # DOCKER_CONTEXT_SETUP_SCRIPT_LOCATION=https://raw.githubusercontent.com/rxmicro/dev/master/docker/docker-context/setup.sh   #
-# sudo wget $DOCKER_CONTEXT_SETUP_SCRIPT_LOCATION -o /usr/local/bin/docker-context && \                                      #
-#           sudo chmod 755 /usr/local/bin/docker-context                                                                     #
+# sudo rm -rf /usr/local/bin/docker-context                                                                                  #
+# sudo wget $DOCKER_CONTEXT_SETUP_SCRIPT_LOCATION -O /usr/local/bin/docker-context                                           #
+# sudo chmod 755 /usr/local/bin/docker-context                                                                               #
 #                                                                                                                            #
 ##############################################################################################################################
 # Usage instructions:                                                                                                        #
@@ -25,8 +26,8 @@ set -eu -o pipefail
 # ----------------------------------------------------------------------------------------------------------------------------
 # Create docker-context.dockerfile
 {
-    echo "FROM busybox",
-    echo "RUN mkdir /docker-context",
+    echo "FROM busybox"
+    echo "RUN mkdir /docker-context"
     echo "COPY . /docker-context"
 } > docker-context.dockerfile
 # ----------------------------------------------------------------------------------------------------------------------------
@@ -34,6 +35,7 @@ set -eu -o pipefail
 docker build -q -t docker-context -f docker-context.dockerfile .
 # ----------------------------------------------------------------------------------------------------------------------------
 # Show docker context
+RUN_ARGS=""
 RUN_ARGS="${RUN_ARGS}echo '----------------------------------------------------------------------------';"
 RUN_ARGS="${RUN_ARGS}echo '------------------------------ DOCKER CONTEXT: -----------------------------';"
 RUN_ARGS="${RUN_ARGS}echo '----------------------------------------------------------------------------';"
