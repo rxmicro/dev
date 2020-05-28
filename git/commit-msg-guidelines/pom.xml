@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>git</artifactId>
+        <groupId>io.rxmicro.dev</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.rxmicro.dev.git</groupId>
+    <artifactId>commit-msg-guidelines</artifactId>
+
+    <properties>
+        <!-- Config file locations -->
+        <pmd.ruleset.location>${basedir}/../../.coding/pmd/ruleset.xml</pmd.ruleset.location>
+        <pmd.exclude.pmd.location>${basedir}/../../.coding/pmd/exclude-pmd.properties</pmd.exclude.pmd.location>
+        <pmd.exclude.cpd.location>${basedir}/../../.coding/pmd/exclude-cpd.properties</pmd.exclude.cpd.location>
+
+        <checkstyle.rules.location>${basedir}/../../.coding/checkstyle/common-rules.xml</checkstyle.rules.location>
+        <checkstyle.suppressions.location>${basedir}/../../.coding/checkstyle/common-suppressions.xml</checkstyle.suppressions.location>
+
+        <spotbugs.exclude.location>${basedir}/../../.coding/spotbugs/exclude.xml</spotbugs.exclude.location>
+    </properties>
+</project>

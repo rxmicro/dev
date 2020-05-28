@@ -1,0 +1,45 @@
+# --------------------------------------------------------- Read more ----------------------------------------------------------------------
+# https://git-scm.com/docs/gitignore
+# http://www.gitignore.io/
+# --------------------------------------------------------- Build Tool Specific Directories ------------------------------------------------
+# Maven
+target
+
+# --------------------------------------------------------- IDE Internal Directories And Files ---------------------------------------------
+# IntelliJ IDEA
+.idea
+.idea_modules
+*.iml
+*.iws
+*.ipr
+*.eml
+.shelf
+out/
+# Eclipse
+.project
+.classpath
+.settings
+.metadata
+bin/
+# NetBeans
+nb*.xml
+
+# --------------------------------------------------------- OS Internal Directories And Files ----------------------------------------------
+# Mac-specific directories
+.DS_Store
+# Linux KDE-specific directories
+.directory
+
+# --------------------------------------------------------- Java Run Files and Directories -------------------------------------------------
+.*pid*
+hs_err_pid*
+*.log
+
+# --------------------------------------------------------- Secrets ------------------------------------------------------------------------
+# Docker environment file
+.env
+
+# --------------------------------------------------------- Temp files ---------------------------------------------------------------------
+tmp
+tmp.*
+*.tmp
