@@ -42,7 +42,7 @@
 
         <!-- Code quality -->
         <spotbugs.version>4.0.3</spotbugs.version>
-        <pmd.version>6.23.0</pmd.version>
+        <pmd.version>7.10.0</pmd.version>
         <checkstyle.version>8.32</checkstyle.version>
 
         <!-- Maven core plugins -->
